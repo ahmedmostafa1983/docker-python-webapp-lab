@@ -1,6 +1,6 @@
 # Flask + Redis App using Docker & Docker Compose
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates a simple **Python Flask** web application connected to **Redis**, fully containerized using **Docker** and orchestrated with **Docker Compose**.
 
@@ -14,7 +14,7 @@ This project is part of my DevOps learning journey and focuses on:
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 * Python (Flask)
 * Redis
@@ -23,7 +23,7 @@ This project is part of my DevOps learning journey and focuses on:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 .
@@ -35,22 +35,22 @@ This project is part of my DevOps learning journey and focuses on:
 
 ---
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
-### 1️⃣ Clone the repository
+### 1- Clone the repository
 
 ```bash
 git clone <your-repo-url>
 cd project
 ```
 
-### 2️⃣ Run the application
+### 2- Run the application
 
 ```bash
 docker-compose up -d
 ```
 
-### 3️⃣ Access the application
+### 3- Access the application
 
 Open your browser and go to:
 
@@ -60,9 +60,9 @@ http://localhost:9000
 
 ---
 
-## 🔄 Application Update Scenarios
+##  Application Update Scenarios
 
-### ❌ Scenario 1: Update without Volume (Image Rebuild Required)
+###  Scenario 1: Update without Volume (Image Rebuild Required)
 
 If you modify `app.py` after running the containers, the change **will NOT reflect** immediately.
 
@@ -73,11 +73,11 @@ docker-compose down
 docker-compose up -d --build
 ```
 
-⚠️ This approach is **not recommended for development** because rebuilding images is time-consuming.
+ This approach is **not recommended for development** because rebuilding images is time-consuming.
 
 ---
 
-### ✅ Scenario 2: Update Using Bind Mount Volume (Recommended)
+###  Scenario 2: Update Using Bind Mount Volume (Recommended)
 
 By adding a bind mount volume in `docker-compose.yml`:
 
@@ -90,7 +90,7 @@ Any change in the source code is reflected **immediately** without rebuilding th
 
 ---
 
-## ❓ Why Did the Application Update Without Rebuilding the Image?
+##  Why Did the Application Update Without Rebuilding the Image?
 
 When using a **bind mount volume**, the application code inside the container is directly linked to the local project directory on the host machine.
 
@@ -104,7 +104,7 @@ This approach is ideal for **development environments**.
 
 ---
 
-## 🎯 Key Learning Outcomes
+##  Key Learning Outcomes
 
 * Building Docker images for Python applications
 * Running multi-container apps with Docker Compose
@@ -113,7 +113,7 @@ This approach is ideal for **development environments**.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 Ahmed Mostafa
 
